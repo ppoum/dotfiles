@@ -1,0 +1,13 @@
+# Local notes etc
+todo.txt
+todo.md
+pam_run.sh
+pam_run.ps1
+
+# IDEs
+.idea/
+.vscode/
+
+# Python
+.venv*/*
+*/__pycache__/
