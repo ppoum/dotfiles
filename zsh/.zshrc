@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git rust zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,6 +94,12 @@ source $ZSH/oh-my-zsh.sh
 
 # ALIASES
 alias lg="lazygit"
+
+# Background python webserver w/ no output
+alias silent-web="python3 -m http.server >/dev/null 2>&1 &"
+
+# Update git submodules to branch revisions
+alias git-submodule-update="git submodule deinit -f . && git submodule update --init"
 
 
 # Add user binaries to path
