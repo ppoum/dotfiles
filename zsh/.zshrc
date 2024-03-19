@@ -101,6 +101,8 @@ alias silent-web="python3 -m http.server >/dev/null 2>&1 &"
 # Update git submodules to branch revisions
 alias git-submodule-update="git submodule deinit -f . && git submodule update --init"
 
+# Configure LD
+export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 
 # Add user binaries to path
 PATH="$HOME/.local/bin:$PATH"
@@ -114,3 +116,7 @@ PATH="$GOPATH/bin:$PATH"
 
 # Configure GPG agent
 export GPG_TTY=$(tty)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
