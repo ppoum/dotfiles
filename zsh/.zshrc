@@ -108,7 +108,7 @@ export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 PATH="$HOME/.local/bin:$PATH"
 
 # Add rust's cargo to path
-PATH="$HOME/.cargo/bin:$PATH"
+. "$HOME/.cargo/env"
 
 # Configure GPG agent
 export GPG_TTY=$(tty)
@@ -117,7 +117,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-. "$HOME/.cargo/env"
 
 # Add go to PATH
 PATH="$PATH:/usr/local/go/bin"
+# Add installed go executables to PATH
+export GOPATH="$HOME/.go"
+PATH="$GOPATH/bin:$PATH"
