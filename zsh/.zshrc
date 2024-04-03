@@ -110,10 +110,6 @@ PATH="$HOME/.local/bin:$PATH"
 # Add rust's cargo to path
 PATH="$HOME/.cargo/bin:$PATH"
 
-# Setup go binaries
-export GOPATH="$HOME/.go"
-PATH="$GOPATH/bin:$PATH"
-
 # Configure GPG agent
 export GPG_TTY=$(tty)
 
@@ -122,3 +118,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 . "$HOME/.cargo/env"
+
+# Add go to PATH
+PATH="$PATH:/usr/local/go/bin"
