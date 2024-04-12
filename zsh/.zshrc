@@ -95,6 +95,8 @@ source $ZSH/oh-my-zsh.sh
 # ALIASES
 alias lg="lazygit"
 
+alias fzhistory="history --reverse | fzf"
+
 # Background python webserver w/ no output
 alias silent-web="python3 -m http.server >/dev/null 2>&1 &"
 
