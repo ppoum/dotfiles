@@ -117,9 +117,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
 # Add go to PATH
 PATH="$PATH:/usr/local/go/bin"
 # Add installed go executables to PATH
 export GOPATH="$HOME/.go"
 PATH="$GOPATH/bin:$PATH"
+
+# Dotnet stuff (thanks work)
+export DOTNET_ROOT="$HOME/.dotnet"
+PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
+
