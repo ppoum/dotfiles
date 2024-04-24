@@ -103,6 +103,10 @@ alias silent-web="python3 -m http.server >/dev/null 2>&1 &"
 # Update git submodules to branch revisions
 alias git-submodule-update="git submodule deinit -f . && git submodule update --init"
 
+# Have non-buffered git output alias
+alias agit="git --no-pager"
+
+
 # Configure LD
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 
