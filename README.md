@@ -2,11 +2,13 @@
 
 ## Installation
 
-This repository makes use of submodules, clone with `git clone --recursive git@github.com:ppoum/dotfiles.git`. GNU stow must be installed. Each subdirectory can be installed by running `stow <dir>`.
+This repository makes use of submodules, clone with `git clone --recursive git@github.com:ppoum/dotfiles.git`.
+GNU stow must be installed. Each subdirectory can be installed by running `stow <dir>`.
 
 ## zsh
 
-The `zsh` directory requires `oh-my-zsh` to be installed. The `zsh-autosuggestions` plugin must also be installed
+The `zsh` directory requires `oh-my-zsh` to be installed. The `zsh-autosuggestions`
+plugin must also be installed
 
 Recommended dependencies:
 
@@ -18,14 +20,22 @@ Recommended dependencies:
 
 ## neovim
 
-The config assumes that v0.10 is installed. Since it is not currently release, checkout `f190f75`.
+The config assumes that v0.10 is installed. Since it is not
+currently released, checkout the `nightly` tag.
 
 Recommended dependencies:
 
-- `python`, `go`, `cargo`, `npm` and `dotnet` should be installed for Mason to be able to install language servers.
+- `python`, `go`, `cargo`, `npm` and `dotnet` (used by Mason)
 - `npm install -g neovim`
 - `fswatch`
 
 ## tmux
 
-`tmux-plugin-manager` (`tpm`) should be installed. To initially install the plugins, open tmux and type `<PREFIX> + I`
+`tmux-plugin-manager` (`tpm`) should be installed. To initially install the
+plugins, open tmux and type `<PREFIX> + I`
+
+## misc_configs
+
+Contains configuration files for the following apps:
+
+- `lazygit`
