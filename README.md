@@ -20,8 +20,7 @@ Recommended dependencies:
 
 ## neovim
 
-The config assumes that v0.10 is installed. Since it is not
-currently released, checkout the `nightly` tag.
+The config assumes that v0.10 is installed.
 
 Recommended dependencies:
 
