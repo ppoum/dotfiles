@@ -78,6 +78,19 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Helper functions
+prepend_to_path() {
+    if [[ :${PATH}: != *:"${1}":* ]]; then
+        path=("${1}" $path)
+    fi
+}
+
+append_to_path() {
+    if [[ :${PATH}: != *:"${1}":* ]]; then
+        path+=("${1}")
+    fi
+}
+
 # Preferred editor
 export EDITOR='nvim'
 
@@ -100,7 +113,7 @@ alias agit="git --no-pager"
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 
 # Add user binaries to path
-PATH="$HOME/.local/bin:$PATH"
+prepend_to_path "$HOME/.local/bin"
 
 # Add rust's cargo to path
 . "$HOME/.cargo/env"
@@ -113,12 +126,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Add go to PATH
-PATH="$PATH:/usr/local/go/bin"
+prepend_to_path "/usr/local/go/bin"
 # Add installed go executables to PATH
 export GOPATH="$HOME/.go"
-PATH="$GOPATH/bin:$PATH"
+prepend_to_path "$GOPATH/bin"
 
 # Dotnet stuff (thanks work)
 export DOTNET_ROOT="$HOME/.dotnet"
-PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
+append_to_path "$DOTNET_ROOT"
+append_to_path "$DOTNET_ROOT/tools"
 
