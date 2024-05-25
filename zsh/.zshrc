@@ -68,12 +68,6 @@ plugins=(git rust zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -90,6 +84,18 @@ append_to_path() {
         path+=("${1}")
     fi
 }
+
+# Command history settings
+HISTSIZE=10000
+HISTFILE="$HOME"/.zsh_history
+SAVE_HIST=$HISTSIZE
+HISTDUP=erase
+setopt append_history        # Append to existing file, don't overwrite
+setopt share_history         # Share history between sessions
+setopt hist_ignore_space     # Don't add commands start with space to hist
+setopt hist_ignore_all_dups  # Delete older duplicates from the history
+setopt hist_save_no_dups     # Don't save duplicates
+setopt hist_find_no_dups     # Ignore dups if they somehow exist
 
 # Preferred editor
 export EDITOR='nvim'
