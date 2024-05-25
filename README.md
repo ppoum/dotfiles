@@ -33,6 +33,19 @@ Recommended dependencies:
 `tmux-plugin-manager` (`tpm`) should be installed. To initially install the
 plugins, open tmux and type `<PREFIX> + I`
 
+## Hyprland
+
+`hyprland` tiling compositor
+
+Dependencies:
+
+- `dolphin`, `wofi` `swaync` and `kitty` (package manager)
+- `swww` (v0.9.5, manual)
+
+Recommended dependencies:
+
+- `xdg-desktop-portal-hyprland` for window sharing
+
 ## misc_configs
 
 Contains configuration files for the following apps:
