@@ -38,3 +38,4 @@ plugins, open tmux and type `<PREFIX> + I`
 Contains configuration files for the following apps:
 
 - `lazygit`
+- `kitty`
