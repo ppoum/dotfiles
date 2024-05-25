@@ -13,14 +13,14 @@ plugin must also be installed
 Recommended dependencies:
 
 - `tmux` v3.4
-- `neovim` (v0.10, currently on `nightly`)
+- `neovim` (v0.10.0)
 - `ripgrep` v14.1.0 (install via cargo)
 - `lazygit` v0.41.0
 - `fd-find` v9.0.0 (install via cargo)
 
 ## neovim
 
-The config assumes that v0.10 is installed.
+The config assumes that v0.10.0 is installed.
 
 Recommended dependencies:
 
