@@ -1,0 +1,6 @@
+[data]
+{{ if (and (eq .chezmoi.hostname "devbox") (eq .chezmoi.osRelease.id "debian"))  }}
+workMachine = true
+{{ else  }}
+workMachine = false
+{{ end  }}
