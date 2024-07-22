@@ -1,0 +1,10 @@
+{{ if .workMachine }}
+# Ignore non work-related files
+.config/hypr
+.config/kitty
+{{ end }}
+
+{{ if not .workMachine }}
+# Work exclusive
+.config/nvim/lua/plugins/work.lua
+{{ end }}
