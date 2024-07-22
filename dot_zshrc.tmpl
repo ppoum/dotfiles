@@ -110,7 +110,10 @@ export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 # Add user binaries to path
 prepend_to_path "$HOME/.local/bin"
 
-{{ if not (eq .chezmoi.osRelease.id "gentoo") }}
+{{ if eq .chezmoi.osRelease.id "gentoo" }}
+# Manually add rust's bin path
+prepend_to_path "$HOME/.cargo/bin"
+{{ else }}
 # Add rust's cargo to path
 . "$HOME/.cargo/env"
 {{ end }}
