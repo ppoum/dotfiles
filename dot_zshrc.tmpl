@@ -103,6 +103,10 @@ alias git-submodule-update="git submodule deinit -f . && git submodule update --
 # Have non-buffered git output alias
 alias agit="git --no-pager"
 
+{{ if eq .chezmoi.osRelease.id "gentoo" }}
+alias emerge-revdep="emerge -pv --depclean"
+{{ end }}
+
 
 # Configure LD
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
