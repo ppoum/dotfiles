@@ -70,6 +70,7 @@ exec-once = swaync
 
 env = WLR_NO_HARDWARE_CURSORS,1
 env = XCURSOR_SIZE,24
+env = XCURSOR_THEME,Adwaita
 env = HYPRCURSOR_SIZE,24
 env = QT_QPA_PLATFORMTHEME,qt5ct
 env = GTK_THEME,catppuccin-macchiato-mauve-standard+default
@@ -224,7 +225,7 @@ bind = $mainMod, V, exec, cliphist list | wofi --show dmenu | cliphist decode | 
 
 # Color picker
 # NOTE: Maybe a bit dangerous, same bind + SHIFT as killing the window
-bind = $mainMod SHIFT, C, exec, hyprpicker --autocop
+bind = $mainMod SHIFT, C, exec, hyprpicker --autocopy
 
 # Screenshot
 bind = $mainMod SHIFT, A, exec, grim -g "$(slurp -d)" - | wl-copy
