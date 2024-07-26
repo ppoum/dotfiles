@@ -226,6 +226,9 @@ bind = $mainMod, V, exec, cliphist list | wofi --show dmenu | cliphist decode | 
 # NOTE: Maybe a bit dangerous, same bind + SHIFT as killing the window
 bind = $mainMod SHIFT, C, exec, hyprpicker --autocop
 
+# Screenshot
+bind = $mainMod SHIFT, A, exec, grim -g "$(slurp -d)" - | wl-copy
+
 # Media keys
 bindie=, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 bindie=, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
