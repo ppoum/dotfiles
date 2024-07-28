@@ -4,12 +4,11 @@
 # source = ~/.config/hypr/myColors.conf
 #
 # TODO: AGS config
-# TODO: Remove spaces in comment blocks when updating hyprland
 
 
-# ###############
-# ## MONITORS ###
-# ###############
+################
+### MONITORS ###
+################
 
 # Main monitor
 monitor=DP-2, 2560x1440@165, 0x0, 1
@@ -19,9 +18,9 @@ monitor=HDMI-A-1, 1920x1080@60, 2560x0, 1, transform, 3
 monitor=HDMI-A-2, 1920x1080@60, -1920x500, 1
 
 
-# ##################
-# ## MY PROGRAMS ###
-# ##################
+###################
+### MY PROGRAMS ###
+###################
 
 # See https://wiki.hyprland.org/Configuring/Keywords/
 
@@ -31,9 +30,9 @@ $fileManager = dolphin
 $menu = wofi --show drun
 
 
-# ################
-# ## AUTOSTART ###
-# ################
+#################
+### AUTOSTART ###
+#################
 
 # Autostart necessary processes (like notifications daemons, status bars, etc.)
 # Or execute your favorite apps at launch like this:
@@ -62,9 +61,9 @@ exec-once = swww-daemon && swww img ~/.local/share/walls/door.png
 exec-once = swaync
 
 
-# ############################
-# ## ENVIRONMENT VARIABLES ###
-# ############################
+#############################
+### ENVIRONMENT VARIABLES ###
+#############################
 
 # See https://wiki.hyprland.org/Configuring/Environment-variables/
 
@@ -76,9 +75,9 @@ env = QT_QPA_PLATFORMTHEME,qt5ct
 env = GTK_THEME,catppuccin-macchiato-mauve-standard+default
 
 
-# ####################
-# ## LOOK AND FEEL ###
-# ####################
+#####################
+### LOOK AND FEEL ###
+#####################
 
 # Refer to https://wiki.hyprland.org/Configuring/Variables/
 
@@ -161,9 +160,9 @@ misc {
 }
 
 
-# ############
-# ## INPUT ###
-# ############
+#############
+### INPUT ###
+#############
 
 # https://wiki.hyprland.org/Configuring/Variables/#input
 input {
@@ -179,9 +178,9 @@ input {
 }
 
 
-# ###################
-# ## KEYBINDINGSS ###
-# ###################
+####################
+### KEYBINDINGSS ###
+####################
 
 $mainMod = SUPER # Sets "Windows" key as main modifier
 
@@ -278,9 +277,9 @@ bind = $mainMod, mouse_down, workspace, e+1
 bind = $mainMod, mouse_up, workspace, e-1
 
 
-# #############################
-# ## WINDOWS AND WORKSPACES ###
-# #############################
+##############################
+### WINDOWS AND WORKSPACES ###
+##############################
 
 # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 # See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
