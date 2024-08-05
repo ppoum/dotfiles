@@ -147,5 +147,8 @@ prepend_to_path "$NPM_CONFIG_PREFIX/bin"
 export DOTNET_ROOT="$HOME/.dotnet"
 append_to_path "$DOTNET_ROOT"
 append_to_path "$DOTNET_ROOT/tools"
+
+alias devtool-bd='(){devtool build $1 && devtool deploy-target $1 $2;}'
+
 {{ end }}
 
