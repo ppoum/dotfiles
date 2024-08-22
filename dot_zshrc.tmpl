@@ -149,6 +149,7 @@ append_to_path "$DOTNET_ROOT"
 append_to_path "$DOTNET_ROOT/tools"
 
 alias devtool-bd='(){devtool build $1 && devtool deploy-target $1 $2;}'
+alias ssh-deb-fwd="ssh -R 127.0.0.1:9000:127.0.0.1:9000"
 
 {{ end }}
 
