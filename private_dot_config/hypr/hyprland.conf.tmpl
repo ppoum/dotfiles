@@ -52,7 +52,7 @@ exec-once = sleep 5 && openrgb -p /home/pam/.config/OpenRGB/dark.orp
 
 {{ if eq .chezmoi.osRelease.id "gentoo" }}
 # Manually start pipewire when no systemd
-exec-once = gentoo-pipewire-launcher
+exec-once = gentoo-pipewire-launcher restart
 {{ end }}
 
 # Start background manager
