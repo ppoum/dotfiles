@@ -40,3 +40,6 @@ require("lazy").setup({
     },
   },
 })
+
+-- Disable copilot autocomplete
+require("copilot.command").disable()
