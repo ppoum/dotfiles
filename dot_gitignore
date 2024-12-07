@@ -3,7 +3,7 @@ todo.txt
 todo.md
 pam_*.sh
 pam_*.ps1
-*/.pam_scratch/
+.pam_scratch/
 
 # IDEs
 .idea/
