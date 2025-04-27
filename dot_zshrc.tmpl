@@ -145,6 +145,10 @@ prepend_to_path "$GOPATH/bin"
 # NPM shouldn't install *anything* in `/usr`, reserved for portage
 export NPM_CONFIG_PREFIX="$HOME/.local/"
 prepend_to_path "$NPM_CONFIG_PREFIX/bin"
+
+# Manually installed on Gentoo
+append_to_path "$HOME/src/flutter/bin"
+
 {{ end }}
 
 {{ if .workMachine }}
